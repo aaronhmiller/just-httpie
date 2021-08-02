@@ -3,13 +3,15 @@
 # just-httpie
 
 ### Usage:
-`docker run --rm saltaaron/just-httpie https://httpbin.org/anything` (add `--pretty all` flag if you want formatted output and add `--print hb` if you want both response header and body output)
+`docker run --rm saltaaron/just-httpie GET https://httpbin.org/anything` (add `--pretty all` flag if you want formatted output and add `--print hb` if you want both response header and body output)
 
 ```
-  PLANET=$(docker run --network host saltaaron/just-httpie :5000/planets/3 | docker run -i --network host saltaaron/just-jq -r .name)
+  PLANET=$(docker run --network host saltaaron/just-httpie GET :5000/planets/3 | docker run -i --network host saltaaron/just-jq -r .name)
   if [ $PLANET != 'Earth' ] ; then
     ...
 ```
+### Implementation note
+Because we are running it from Docker, relying on the default HTTPie behaviors of detecting GET and POST doesn't align with more standard usage. For this reason, it's best to be explicit about the desired behavior for METHOD.
 
 ### Design
 just-httpie is intended to be used as a CLI pipeline tool and its flags are streamlined for that purpose. To match the default output of the httpie executable, you'll want to add `--pretty all --print hb` (apply formatting and print response header and body).
