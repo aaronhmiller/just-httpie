@@ -1,4 +1,4 @@
-![CI](https://github.com/aaronhmiller/just-httpie/workflows/CI/badge.svg)
+[![CI](https://github.com/aaronhmiller/just-httpie/workflows/CI/badge.svg)](https://github.com/aaronhmiller/just-httpie/actions)
 
 # just-httpie
 
