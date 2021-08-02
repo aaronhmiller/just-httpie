@@ -6,7 +6,7 @@
 `docker run --rm saltaaron/just-httpie https://httpbin.org/anything` (add `--pretty all` flag if you want formatted output)
 
 ```
-  PLANET=$(docker run -i --network host saltaaron/just-httpie :5000/planets/3 -b | docker run -i --network host saltaaron/just-jq -r .name)
+  PLANET=$(docker run --network host saltaaron/just-httpie :5000/planets/3 -b | docker run -i --network host saltaaron/just-jq -r .name)
   if [ $PLANET != 'Earth' ] ; then
     ...
 ```
