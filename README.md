@@ -10,7 +10,10 @@
   if [ $PLANET != 'Earth' ] ; then
     ...
 ```
+should you need to shell into the container, override the entrypoint and run it like this: `docker run --entrypoint /bin/sh --rm -it saltaaron/just-httpie`
+
 ### Implementation note
+
 Because we are running it from Docker, relying on the default HTTPie behaviors of detecting GET and POST doesn't align with more standard usage. For this reason, it's best to be explicit about the desired behavior for METHOD.
 
 ### Design
