@@ -1,7 +1,5 @@
-FROM alpine:latest
+FROM python:3-alpine
   
-RUN apk add --no-cache python3 py3-pip && \
-    pip3 install --upgrade httpie && \
-    rm -rf /root/.cache && rm -rf /var/cache/apk/* 
+RUN pip3 install --upgrade httpie
 
 ENTRYPOINT [ "http" ]
