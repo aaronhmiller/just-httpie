@@ -3,13 +3,9 @@ name: Docker Hub CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+ 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
