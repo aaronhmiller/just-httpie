@@ -1,4 +1,5 @@
 [![CI](https://github.com/aaronhmiller/just-httpie/workflows/CI/badge.svg)](https://github.com/aaronhmiller/just-httpie/actions)
+[![Docker Hub CI](https://github.com/aaronhmiller/just-httpie/actions/workflows/docker-hub-ci.yaml/badge.svg)](https://github.com/aaronhmiller/just-httpie/actions/workflows/docker-hub-ci.yaml)
 
 # just-httpie
 
