@@ -1,4 +1,4 @@
-FROM python:3.8-alpine as builder
+FROM python:3.11.9-alpine as builder
 
 # Install and compile
 RUN apk --update add --no-cache g++ && pip install --upgrade httpie
